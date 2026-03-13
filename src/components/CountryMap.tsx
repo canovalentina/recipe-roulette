@@ -5,6 +5,7 @@ import {
   ComposableMap,
   Geographies,
   Geography,
+  Marker,
   ZoomableGroup,
 } from "react-simple-maps";
 import { Country } from "../../lib/countries";
@@ -167,6 +168,22 @@ export function CountryMap({ country }: CountryMapProps) {
               })
             }
           </Geographies>
+          {/* Pin marker — always visible even for tiny islands */}
+          <Marker coordinates={countryCenter}>
+            <g transform="translate(-4, -10)" style={{ pointerEvents: "none" }}>
+              <filter id="pin-shadow" x="-50%" y="-50%" width="200%" height="200%">
+                <feDropShadow dx="0" dy="0.5" stdDeviation="0.5" floodColor="#00000055" />
+              </filter>
+              <path
+                d="M4 8C5.9 6.2 7.5 4.8 7.5 3.5a3.5 3.5 0 1 0-7 0C0.5 4.8 2.1 6.2 4 8z"
+                fill="#F4B333"
+                stroke="#FFFFFF"
+                strokeWidth="0.8"
+                filter="url(#pin-shadow)"
+              />
+              <circle cx="4" cy="3.5" r="1.2" fill="#1D3557" />
+            </g>
+          </Marker>
         </ZoomableGroup>
       </ComposableMap>
 
