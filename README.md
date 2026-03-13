@@ -1,10 +1,30 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Recipe Roulette 🌍🍽️
 
-## Getting Started
+A fun, interactive web application that randomly selects a country and fetches traditional recipes for you to try!
 
-First, run the development server:
+## Motivation
+The idea behind this project was to create an engaging app to help discover and test different recipes on a weekly basis. Instead of wondering what to cook, just spin the globe, let fate decide your culinary destination, and get cooking!
+
+## Features
+- **Interactive Spinning Globe**: A 3D-styled animated globe that lands on a random country.
+- **Recipe Discovery**: Fetches verified, traditional recipes from [TheMealDB API](https://www.themealdb.com/).
+- **Detailed Instructions**: View the required ingredients, step-by-step cooking instructions, and even YouTube video tutorials directly in the app.
+- **Responsive Design**: Beautiful, playful UI that works seamlessly across desktop and mobile devices.
+
+## Tech Stack
+- **Framework**: [Next.js 14](https://nextjs.org) (App Router)
+- **Language**: TypeScript
+- **Styling**: [Tailwind CSS v3](https://tailwindcss.com)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Globe & Maps**: D3.js (d3-geo), HTML5 Canvas, and `react-simple-maps`
+- **Data Source**: [TheMealDB API](https://www.themealdb.com/api.php)
+
+## Getting Started Locally
+
+First, install the dependencies (if you haven't already) and then run the development server:
 
 ```bash
+npm install
 npm run dev
 # or
 yarn dev
@@ -16,21 +36,8 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deploying
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The app is a standard Next.js application, which means the easiest way to deploy it is by using the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme). Simply push your code to a GitHub repository, link it to Vercel, and it will deploy instantly!
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Check out the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
