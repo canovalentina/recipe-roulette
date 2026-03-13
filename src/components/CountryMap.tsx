@@ -134,7 +134,7 @@ export function CountryMap({ country }: CountryMapProps) {
             {({ geographies }) =>
               geographies.map((geo) => {
                 const isSelected = targetNumericId
-                  ? String(geo.id) === String(parseInt(targetNumericId, 10))
+                  ? String(geo.id) === String(targetNumericId)
                   : false;
 
                 return (
