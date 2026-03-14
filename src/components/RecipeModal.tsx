@@ -108,7 +108,7 @@ export function RecipeModal({ mealId, onClose }: RecipeModalProps) {
               </div>
 
               {/* Content area */}
-              <div className="p-6 md:p-10 pb-12 md:pb-12 md:w-[60%] space-y-8 bg-white md:overflow-y-auto min-h-0">
+              <div className="p-6 md:p-10 pb-20 md:pb-12 md:w-[60%] space-y-8 bg-white md:overflow-y-auto min-h-0">
                 
                 {/* Ingredients section */}
                 <section>
@@ -163,7 +163,7 @@ function UtensilsIcon() {
 function AuthzLinks({ recipe }: { recipe: MealDetail }) {
   if (!recipe.strYoutube && !recipe.strSource) return null;
   return (
-    <div className="flex flex-wrap gap-4 pt-6 mt-6 border-t border-gray-100">
+    <div className="flex flex-col sm:flex-row gap-4 pt-6 mt-6 border-t border-gray-100 pb-4">
       {recipe.strYoutube && (
         <a
           href={recipe.strYoutube}
@@ -171,7 +171,7 @@ function AuthzLinks({ recipe }: { recipe: MealDetail }) {
           rel="noopener noreferrer"
           className="flex items-center gap-2 bg-red-100 text-red-600 hover:bg-red-600 hover:text-white px-4 py-3 rounded-xl font-semibold transition-colors w-full sm:w-auto justify-center"
         >
-          <Youtube size={20} /> Watch on YouTube
+          <Youtube size={20} className="shrink-0" /> Watch on YouTube
         </a>
       )}
       {recipe.strSource && (
@@ -181,7 +181,7 @@ function AuthzLinks({ recipe }: { recipe: MealDetail }) {
           rel="noopener noreferrer"
           className="flex items-center gap-2 bg-gray-100 text-gray-700 hover:bg-brand-navy hover:text-white px-4 py-3 rounded-xl font-semibold transition-colors w-full sm:w-auto justify-center cursor-pointer"
         >
-          <ExternalLink size={20} /> Original Source
+          <ExternalLink size={20} className="shrink-0" /> Original Source
         </a>
       )}
     </div>
